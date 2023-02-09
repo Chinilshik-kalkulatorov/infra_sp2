@@ -13,6 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='title',
             name='name',
-            field=models.CharField(max_length=256, verbose_name='Название произведения'),
+            field=models.CharField(
+                max_length=256, verbose_name='Название произведения'),
         ),
     ]
