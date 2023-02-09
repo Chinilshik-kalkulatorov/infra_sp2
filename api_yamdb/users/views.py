@@ -23,7 +23,7 @@ def user_sing_up(request):
             generate_confirmation_code(username)
             return Response(
                 serializer.data, status=status.HTTP_200_OK
-                )
+            )
         return Response(
             "Вы не можете создать пользователя с таким username.",
             status=status.HTTP_400_BAD_REQUEST,
@@ -38,7 +38,7 @@ def user_sing_up(request):
         generate_confirmation_code(username)
         return Response(
             serializer.data, status=status.HTTP_200_OK
-            )
+        )
     return Response(
         'Пользователя с указанной почтой не существует',
         status=status.HTTP_400_BAD_REQUEST
@@ -62,7 +62,7 @@ def get_user_token(request):
         token_data = {'token': str(refresh.access_token)}
         return Response(
             token_data, status=status.HTTP_200_OK
-            )
+        )
     return Response(
         'Код подтверждения неверный', status=status.HTTP_400_BAD_REQUEST
     )
