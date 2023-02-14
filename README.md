@@ -60,7 +60,7 @@ python3 manage.py runserver
 
 Файл фикстур:
 ```
-$ python manage.py loaddata fixtures/fixtures.json 
+$ python manage.py loaddata fixtures.json 
 ```
 Переменные окружения:
 
